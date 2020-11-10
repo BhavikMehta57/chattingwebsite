@@ -1,0 +1,63 @@
+@import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+body
+{
+	background-color: #000000;
+}
+.carousel-inner
+{
+	height: 400px;
+}
+img 
+{
+	max-width: 100%;
+	width: 100%;
+}
+.jumbotron 
+{
+	background-color: #000000;
+	padding-top: 10px !important;
+	padding-bottom: 10px !important;
+	margin-bottom: 0px;
+}
+.btn
+{
+	background-color: #FFFFFF;
+	width: 300px;
+	height: 75px;
+	animation:animatezoom 6s infinite cubic-bezier(0.25,0.5,0.75,1.5)
+}
+@keyframes animatezoom
+{
+	from{transform:scale(0)} to{transform:scale(1)}
+}
+/*.btn:hover
+{
+	box-shadow:5px 10px;
+	box-shadow:5px 10px #FFFFFF; 
+}*/
+.btn span 
+{
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 1s;
+}
+.btn span:after 
+{
+	content: '\00bb';
+	font-size: 25px;
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	right: -20px;
+	transition: 0.5s;
+}
+.btn:hover span 
+{
+	padding-right: 25px;
+}
+.btn:hover span:after 
+{
+	opacity: 1;
+	right: 0;
+}
